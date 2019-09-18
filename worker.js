@@ -1,8 +1,5 @@
-onmessage = function(event) {
-    console.info(event);
+onmessage = (event) => {
+    const dataView = new DataView(event.data.buffer);
 
-    const arrayBuffer = new ArrayBuffer(event.data.length);
-    var view1 = new DataView(arrayBuffer);
-
-    console.info(view1);
+    console.info(dataView);
 }
